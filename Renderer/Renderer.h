@@ -1,6 +1,7 @@
 #pragma once
 #include <SDL.h>
 #include "Canvas.h"
+#include "Camera.h"
 
 
 struct Ray;
@@ -18,7 +19,7 @@ public:
 	void CopyCanvas(const Canvas& canvas);
 	void Present();
 
-	void Render(Canvas& canvas, Scene& Scene);
+	void Render(Canvas& canvas, Scene& scene, Camera& camera);
 
 	friend class Canvas;
 private:
