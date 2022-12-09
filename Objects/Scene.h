@@ -22,6 +22,8 @@ class Scene
 public:
 
     Scene() = default;
+    Scene(const color3& top_color, const color3& bottom_color) :
+        grad_top{ top_color }, grad_bottom{ bottom_color } {};
 
 
 
@@ -32,6 +34,8 @@ public:
 
 
 private:
+    color3 grad_top = {0.5f, 0.7f, 1.0f};
+    color3 grad_bottom = {1, 1, 1};
 
     std::vector <std::unique_ptr<Object>> m_objects;
 
